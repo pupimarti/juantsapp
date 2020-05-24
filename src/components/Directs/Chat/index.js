@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
 import "./css.css";
 import Comment from "components/InputChat";
-import verify from "img/verify.svg";
 import getChatUser from "components/services/getChatUser";
 import sendMessage from "components/services/sendMessage";
 import Loading from "components/Loading";
 import laptop from "img/laptop.svg";
+import search from "img/search.svg";
+import clip from "img/clip.svg";
 
 export default function Chat(props) {
   const [messages, setMessages] = useState(null);
@@ -87,16 +88,26 @@ export default function Chat(props) {
             props.back(null);
           }}
         ></div>
-        <div className="content-header-chat" to={"/" + props.direct.user}>
-          <img
-            className="chat-user-img"
-            src={props.direct.picture}
-            alt="user-img"
-          />
-          <p className="chat-user-name">{props.direct.user}</p>
-          {props.direct.verify && (
-            <img className="verify" src={verify} alt="Verificado" />
-          )}
+        <div className="content-header-chat">
+          <div className="header-chat">
+            <div className="content-header-user">
+              <img
+                className="chat-user-img"
+                src={props.direct.picture}
+                alt="user-img"
+              />
+              <p className="chat-user-name">{props.direct.name}</p>
+            </div>
+            <div className="content-actions-header">
+              <img src={search} alt="search" className="icon" />
+              <img src={clip} alt="clip" className="icon" />
+              <div className="menu">
+                  <div className="point"></div>
+                  <div className="point"></div>
+                  <div className="point"></div>
+                </div>
+            </div>
+          </div>
         </div>
       </header>
       <div className="chat-content-messages">
@@ -112,7 +123,7 @@ export default function Chat(props) {
                 </div>
               ) : (
                 <div key={i} className="content-chat-message">
-                  <div to={"/" + props.direct.user}>
+                  <div>
                   </div>
                   <div className="chat-message">{m.message}
                   <p className="chat-message-time">

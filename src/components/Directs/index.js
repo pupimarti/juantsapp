@@ -101,6 +101,7 @@ export default function Directs() {
                   <Direct
                     key={i}
                     user={user.user}
+                    name={user.name}
                     picture={user.picture}
                     verify={user.verify}
                     message={d.messages[d.messages.length - 1].message}

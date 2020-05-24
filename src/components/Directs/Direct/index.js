@@ -22,6 +22,7 @@ export default function Direct(props) {
           user: props.user,
           verify: props.verify,
           picture: props.picture,
+          name: props.name
         });
       }}
       className={getClass()}
@@ -36,7 +37,7 @@ export default function Direct(props) {
         </div>
         <div>
           <div className="direct-user">
-            <p>{props.user}</p>
+            <p>{props.name}</p>
           </div>
           <p className="direct-message">
             {props.message.length > 30
