@@ -6,10 +6,17 @@ import getChatUser from "components/services/getChatUser";
 import sendMessage from "components/services/sendMessage";
 import Loading from "components/Loading";
 import laptop from "img/laptop.svg";
-import ReactTimeAgo from 'react-time-ago';
 
 export default function Chat(props) {
   const [messages, setMessages] = useState(null);
+
+  function getHour(time){
+    const date = new Date(time);
+    return date.toLocaleTimeString(navigator.language, {
+      hour: '2-digit',
+      minute:'2-digit'
+    });
+  }
 
   useEffect(() => {
     if (props.direct !== null) {
@@ -100,14 +107,7 @@ export default function Chat(props) {
                 <div key={i} className="content-chat-message own">
                   <div className="chat-message own">{m.message}
                   <p className="chat-message-time">
-                          {" "}
-                          {m.time && (
-                            <ReactTimeAgo
-                              date={new Date(m.time)}
-                              timeStyle="twitter"
-                              locale="es"
-                            />
-                          )}
+                          {getHour(m.time)}
                     </p></div>
                 </div>
               ) : (
@@ -116,14 +116,9 @@ export default function Chat(props) {
                   </div>
                   <div className="chat-message">{m.message}
                   <p className="chat-message-time">
-                          {" "}
-                          {m.time && (
-                            <ReactTimeAgo
-                              date={new Date(m.time)}
-                              timeStyle="twitter"
-                              locale="es"
-                            />
-                          )}
+                    {m.time &&
+                    ""+getHour(m.time)
+                    }
                     </p></div>
                 </div>
               )
