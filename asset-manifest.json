@@ -1,18 +1,19 @@
 {
   "files": {
-    "main.css": "/juantsapp/static/css/main.3ccc0208.chunk.css",
-    "main.js": "/juantsapp/static/js/main.c63202c7.chunk.js",
-    "main.js.map": "/juantsapp/static/js/main.c63202c7.chunk.js.map",
+    "main.css": "/juantsapp/static/css/main.d111060e.chunk.css",
+    "main.js": "/juantsapp/static/js/main.6237f054.chunk.js",
+    "main.js.map": "/juantsapp/static/js/main.6237f054.chunk.js.map",
     "runtime-main.js": "/juantsapp/static/js/runtime-main.62e77619.js",
     "runtime-main.js.map": "/juantsapp/static/js/runtime-main.62e77619.js.map",
-    "static/js/2.019ec1f4.chunk.js": "/juantsapp/static/js/2.019ec1f4.chunk.js",
-    "static/js/2.019ec1f4.chunk.js.map": "/juantsapp/static/js/2.019ec1f4.chunk.js.map",
+    "static/js/2.53d8866e.chunk.js": "/juantsapp/static/js/2.53d8866e.chunk.js",
+    "static/js/2.53d8866e.chunk.js.map": "/juantsapp/static/js/2.53d8866e.chunk.js.map",
     "index.html": "/juantsapp/index.html",
-    "precache-manifest.78b0611d3fb200cc4779817d0560d0be.js": "/juantsapp/precache-manifest.78b0611d3fb200cc4779817d0560d0be.js",
+    "precache-manifest.b8e0393569925bba45071b4d2d03a725.js": "/juantsapp/precache-manifest.b8e0393569925bba45071b4d2d03a725.js",
     "service-worker.js": "/juantsapp/service-worker.js",
-    "static/css/main.3ccc0208.chunk.css.map": "/juantsapp/static/css/main.3ccc0208.chunk.css.map",
-    "static/js/2.019ec1f4.chunk.js.LICENSE.txt": "/juantsapp/static/js/2.019ec1f4.chunk.js.LICENSE.txt",
+    "static/css/main.d111060e.chunk.css.map": "/juantsapp/static/css/main.d111060e.chunk.css.map",
+    "static/js/2.53d8866e.chunk.js.LICENSE.txt": "/juantsapp/static/js/2.53d8866e.chunk.js.LICENSE.txt",
     "static/media/account.svg": "/juantsapp/static/media/account.71672f0b.svg",
+    "static/media/clip.svg": "/juantsapp/static/media/clip.d21734f4.svg",
     "static/media/emoji.svg": "/juantsapp/static/media/emoji.27890e05.svg",
     "static/media/history.svg": "/juantsapp/static/media/history.c244d23a.svg",
     "static/media/laptop.svg": "/juantsapp/static/media/laptop.d43dd5af.svg",
@@ -23,8 +24,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.62e77619.js",
-    "static/js/2.019ec1f4.chunk.js",
-    "static/css/main.3ccc0208.chunk.css",
-    "static/js/main.c63202c7.chunk.js"
+    "static/js/2.53d8866e.chunk.js",
+    "static/css/main.d111060e.chunk.css",
+    "static/js/main.6237f054.chunk.js"
   ]
 }
