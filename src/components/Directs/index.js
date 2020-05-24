@@ -68,7 +68,7 @@ export default function Directs() {
         }
       >
         <header className="content-directs-header">
-          <div className="center-width">
+          <div className="center-width header">
             <img className="directs-header-img" src={user.picture} alt="your img" />
             <div className="content-actions-header">
               <img 
@@ -90,8 +90,8 @@ export default function Directs() {
               </div>
             </div>
           </div>
-        </header>
         <Search />
+        </header>
         <div className="content-directs-messages">
           {data &&
             data.map((d, i) => {

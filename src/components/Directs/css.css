@@ -12,7 +12,7 @@
 }
 
 .center-width{
-    width: 90%;
+    width: 93%;
     margin: 0 auto;
 }
 
@@ -24,10 +24,6 @@
 }
 
 .content-directs-header{
-    display: flex;
-    align-items: center;
-    padding: 12px 0;
-    height: 32px;
     border-bottom: 1px solid #dbdbdb;
     background-color: #ededed;
 }
@@ -36,10 +32,11 @@
     border-bottom: 1px solid #525151;
 }
 
-.content-directs-header .center-width{
+.content-directs-header .center-width.header{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 8px 0;
 }
 
 .directs-header-img{
