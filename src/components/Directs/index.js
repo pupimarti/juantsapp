@@ -2,9 +2,10 @@ import React, { useState, useEffect, useContext } from "react";
 import getDirects from "components/services/getDirects";
 import Loading from "components/Loading";
 import Direct from "./Direct";
-import newMessage from "./newmessage.svg";
+import newMessage from "img/message.svg";
 import Chat from "./Chat";
 import New from "./New";
+import history from 'img/history.svg';
 
 import "./css.css";
 
@@ -18,6 +19,8 @@ export default function Directs() {
   const [data, setData] = useState("loading");
 
   const [viewDirect, setViewDirect] = useState(null);
+
+  const [user, setUser] = useState(null);
 
   const [newChat, setNewChat] = useState(false);
 
@@ -37,6 +40,8 @@ export default function Directs() {
 
   useEffect(() => {
     if (data === "loading") {
+      const user = getUserMin("default");
+      setUser(user);
       const directs_ = getDirects("default", directs);
       if(directs_) setData(directs_.directs);
       else setData([]);
@@ -62,15 +67,28 @@ export default function Directs() {
         }
       >
         <header className="content-directs-header">
-          <h5>Direct</h5>
-          <img
-            onClick={() => {
-              setNewChat(true);
-            }}
-            className="icon"
-            src={newMessage}
-            alt="nuevo mensaje"
-          />
+          <div className="center-width">
+            <img className="directs-header-img" src={user.picture} alt="your img" />
+            <div className="content-actions-header">
+              <img 
+              className="icon"
+              src={history}
+              alt="history"/>
+              <img
+                onClick={() => {
+                  setNewChat(true);
+                }}
+                className="icon"
+                src={newMessage}
+                alt="nuevo mensaje"
+              />
+              <div className="menu">
+                <div className="point"></div>
+                <div className="point"></div>
+                <div className="point"></div>
+              </div>
+            </div>
+          </div>
         </header>
         <div className="content-directs-messages">
           {data &&
