@@ -12,6 +12,7 @@ JavascriptTimeAgo.locale(es);
 function App() {
   return (
     <div className="content-app">
+      <div className="header-app"></div>
       <div className="app">
         <AppContextProvider>
             <Directs />

@@ -1,5 +1,6 @@
 .content-chat{
-    width: 60%;
+    width: 100%;
+    max-width: 977px;
     height: 100%;
     border-left: 1px solid #dbdbdb;
     display: flex;
@@ -16,6 +17,7 @@
     height: 100%;
     width: 100%;
     display: flex;
+    background-color: #f8f9fa;
 }
 
 .content-chat-default{
@@ -141,6 +143,14 @@
     bottom: 0;
     position: absolute;
 }
+
+
+@media screen and (max-width:1440px){
+    .content-chat{
+        width: 65%;
+    }
+  }
+  
 
 
 @media screen and (max-width: 800px){
