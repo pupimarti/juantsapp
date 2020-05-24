@@ -1,0 +1,31 @@
+[
+    {
+        "user":"default",
+        "directs":[
+            {
+                "user":"pupi_marti",
+                "read":false,
+                "messages":[
+                    {
+                        "message":"¡Bienvenido! Te comento que todo visitante entra con la cuenta 'default' para facilitar la visita a la web. Podes cambiar los colores entre modo oscuro o claro, responder mensajes, comentar/dar me gusta a publicaciones, vistar perfiles, seguir o dejar de seguir usuarios y hacer publicaciones!",
+                        "time":"Sun May 17 2020 23:52:41 GMT-0300"
+                    },
+                    {
+                        "message":"¡Gracias por visitar Pupigram!",
+                        "time":"Sun May 17 2020 23:52:41 GMT-0300"
+                    }
+                ]
+            },
+            {
+                "user":"leomessi",
+                "read":false,
+                "messages":[
+                    {
+                        "message":"Bienvenido!!",
+                        "time":"Sun May 10 2020 23:52:41 GMT-0300"
+                    }
+                ]
+            }
+        ]
+    }
+]

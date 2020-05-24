@@ -1,0 +1,39 @@
+.switch-mode{
+    background-color: orange;
+    border-radius: 1000px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    transition: .3s ease all;
+    padding:5px;
+}
+.switch-mode::after{
+    content:"";
+    width: 27px;
+    height: 27px;
+    display: block;
+    position: absolute;
+    top:calc(50% - 18px);
+    right:-2px;
+    left:unset;
+    border: 4px solid #f1f1f1;
+    border-radius: 100px;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, .2);
+}
+.dark .switch-mode {
+    background: #343D58;
+}
+.dark .switch-mode::after{
+    left:-2px;
+    right: unset;
+}
+
+.sun{
+    margin-left:10px;
+}
+.switch-mode > span{
+    font-size: 15px;
+}

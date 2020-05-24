@@ -1,24 +1,22 @@
 import React from 'react';
-import logo from './logo.svg';
+import Directs from './components/Directs'
+import { AppContextProvider } from "components/Context/AppContext";
+import JavascriptTimeAgo from "javascript-time-ago";
+import es from "javascript-time-ago/locale/es";
+
 import './App.css';
+
+
+JavascriptTimeAgo.locale(es);
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="content-app">
+      <div className="app">
+        <AppContextProvider>
+            <Directs />
+          </AppContextProvider>
+      </div>
     </div>
   );
 }

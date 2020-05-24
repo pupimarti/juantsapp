@@ -1,38 +1,81 @@
-.App {
+.light, .dark ::selection{
+  color: #262626;
+  background-color: #FAFAFA;
+  transition: .3s ease all;
+}
+
+
+.dark, .light ::selection {
+  background-color: #262626;
+  color: #edefee;
+  transition: .3s ease all;
+}
+
+.content-app{
+  width: 935px;
+  max-width: 100vw;
+  margin: 0 auto;
+}
+
+.app{
+  padding-top: 70px;
+  height: 95vh;
+}
+
+.mobile{
+  display: none !important;
+}
+
+
+.footer{
+  font-size: 0.6em;
+  font-weight: 500;
   text-align: center;
+  padding-top:24px;
+  padding-bottom: 24px;
+  color: #525151;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.dark .footer{
+  color: #dbdbdb;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.no-select, img, button, .app {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none !important; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+.invisible{
+    display: none;
+}
+
+.icon{
+  width: 24px;
+  height: 24px;
+}
+
+@media (max-width:800px){
+  .footer{
+      padding-bottom: 60px;
+  }
+  
+  .mobile{
+      display: block !important;
+  }
+
+  .pc{
+      display: none !important;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+@media screen and (max-width:650px){
+  .app{
+      padding-top: 50px;
+      min-height: calc(100vh - 50px);
   }
 }
