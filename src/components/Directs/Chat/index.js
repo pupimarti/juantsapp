@@ -92,25 +92,22 @@ export default function Chat(props) {
         </div>
       </header>
       <div className="chat-content-messages">
-        {messages &&
-          messages.map((m, i) =>
-            m.own ? (
-              <div key={i} className="content-chat-message own">
-                <div className="chat-message own">{m.message}</div>
-              </div>
-            ) : (
-              <div key={i} className="content-chat-message">
-                <div to={"/" + props.direct.user}>
-                  <img
-                    className="chat-user-img"
-                    src={props.direct.picture}
-                    alt="user-img"
-                  />
+        <div className="center-width">
+          {messages &&
+            messages.map((m, i) =>
+              m.own ? (
+                <div key={i} className="content-chat-message own">
+                  <div className="chat-message own">{m.message}</div>
                 </div>
-                <div className="chat-message">{m.message}</div>
-              </div>
-            )
-          )}
+              ) : (
+                <div key={i} className="content-chat-message">
+                  <div to={"/" + props.direct.user}>
+                  </div>
+                  <div className="chat-message">{m.message}</div>
+                </div>
+              )
+            )}
+        </div>
       </div>
       {messages === null && <Loading />}
       <div className="chat-content-comment">
