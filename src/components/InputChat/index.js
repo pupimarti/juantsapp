@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react";
+import send from 'img/send.svg';
+import emoji from 'img/emoji.svg';
 import "./css.css";
 
 export default function InputChat(props) {
-  const [comment, setComment] = useState("");
-  const handleChangeComment = (e) => {
-    setComment(e.target.value);
+  const [message, setMessage] = useState("");
+  const handleChangeMessage = (e) => {
+    setMessage(e.target.value);
   };
 
   const [input, setInput] = useState(null);
@@ -15,9 +17,9 @@ export default function InputChat(props) {
   })
 
   const handleSend = () => {
-    if(comment.length > 0){
-      props.send(comment);
-      setComment("");
+    if(message.length > 0){
+      props.send(message);
+      setMessage("");
     }
   };
 
@@ -27,25 +29,18 @@ export default function InputChat(props) {
   }
 
   return (
-    <div className="comment-post">
-      <div className="center-post content-comment">
+    <div className="message-post">
+      <div className="center-width content-message">
+        <img src={emoji} alt="emoji" className="icon-emoji-message" />
         <input
           ref={(i) => {setInput(i)}}
-          className="comment"
-          value={comment}
-          onChange={handleChangeComment}
+          className="message"
+          value={message}
+          onChange={handleChangeMessage}
           onKeyDown={handleKeyDown}
-          placeholder={props.message ? "Envía un mensaje..." : "Añade un comentario..."}
+          placeholder="Escribe un mensaje aquí"
         ></input>
-        <button
-          onClick={handleSend}
-          disabled={comment.length <= 0}
-          className={
-            comment.length > 0 ? "action-comment" : "action-comment disabled"
-          }
-        >
-          {props.message ? "Enviar" : "Publicar"}
-        </button>
+          <img onClick={handleSend} src={send} alt="send" className="icon-send-message" />
       </div>
     </div>
   );

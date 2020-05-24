@@ -1,39 +1,57 @@
-.comment-post{
-    border-top: 1px solid #dbdbdb;
-    background-color: #ededed;
+.message-post{
+    background-color: #F0F0F0;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 62px;
 }
 
-.dark .comment-post{
+.dark .message-post{
     border-top: #525151 1px solid;
 }
 
-.content-comment{
+.content-message{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 56px;
+    height: 42px;
 }
 
-.comment{
-    font-size: 0.7em;
+.message{
+    font-size: 0.8em;
     border: none;
     width: 90%;
-    background: none;
+    background: #FFF;
+    border-radius: 100px;
+    padding:10px;
 }
 
-.dark .comment{
+.dark .message{
     color: #edefee;
 }
 
-.comment:focus{
+.message:focus{
     outline: none;
 }
 
-.comment::placeholder{
+.message::placeholder{
     color: #AAA;
 }
 
-.action-comment{
+.icon-emoji-message{
+    width: 23px;
+    height: 23px;
+    margin-right: 20px;
+}
+
+.icon-send-message{
+    width: 22px;
+    height: 22px;
+    margin-left: 10px;
+}
+
+.action-message{
     background: none;
     border: 0;
     font-weight: 700;
@@ -46,7 +64,7 @@
 }
 
 @media(max-width: 800px){
-    .action-comment{
+    .action-message{
         width: 20%;
         max-width: 100px;
     }
