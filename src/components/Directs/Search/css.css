@@ -1,0 +1,33 @@
+.content-search{
+    height: 49px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f7f7f7;
+}
+
+.search{
+    border-radius: 100px;
+    background-color: #FFF;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.icon-search{
+    width: 13px;
+    height: 13px;
+    margin: 0 15px;
+}
+
+.input-search{
+    border: none;
+    width: 80%;
+    font-size: 0.7em;
+}
+
+.input-search:focus {
+    outline: none;
+}

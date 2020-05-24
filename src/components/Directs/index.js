@@ -6,6 +6,7 @@ import newMessage from "img/message.svg";
 import Chat from "./Chat";
 import New from "./New";
 import history from 'img/history.svg';
+import Search from './Search';
 
 import "./css.css";
 
@@ -90,6 +91,7 @@ export default function Directs() {
             </div>
           </div>
         </header>
+        <Search />
         <div className="content-directs-messages">
           {data &&
             data.map((d, i) => {
