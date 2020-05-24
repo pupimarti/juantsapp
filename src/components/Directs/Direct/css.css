@@ -1,19 +1,37 @@
 .content-direct{
-    padding: 8px 16px;
     position: relative;
     display: flex;
     align-items: center;
+    justify-content: center;
     cursor: pointer;
-    height: 56px;
+    box-sizing: border-box;
+    height: 72px;
+}
+
+.content-direct:hover{
+    background-color: #f5f5f5;
+}
+
+.content-direct.select{
+    background-color: #ebebeb !important;
+}
+
+.direct{
+    display: flex;
+    width: 93%;
 }
 
 .content-direct .default-img, .content-direct .img-account{
-    width: 56px;
-    height: 56px;
+    width: 49px;
+    height: 49px;
+    border-radius: 50%;
+    margin-right: 16px;
 }
 
 .direct-user{
     display: flex;
+    justify-content: space-between;
+    font-size: 0.85em !important;
 }
 
 .verify-directs{
@@ -22,17 +40,35 @@
     height: 20px;
 }
 
+.direct-line-bottom{
+    background-color: #f5f5f5;
+    width: 77%;
+    height: 0.7px;
+    border: none;
+    position: absolute;
+    bottom: -10px;
+    right: 5px;
+}
+
 .direct-user, .direct-message{
     font-size: 14px;
 }
 
 .direct-message{
-    color: #AAA;
+    color: rgba(0, 0, 0, 0.6);
 }
 
 .unread .direct-user, .unread .direct-message{
     font-weight: 500;
     color: inherit;
+}
+
+.time-notif{
+    position: absolute;
+    right: 10px;
+    color: #999999;
+    font-size: 0.6em;
+    top: 10px;
 }
 
 .direct-unread{

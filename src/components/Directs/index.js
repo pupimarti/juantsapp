@@ -106,6 +106,7 @@ export default function Directs() {
                     message={d.messages[d.messages.length - 1].message}
                     time={d.messages[d.messages.length - 1].time}
                     read={d.read}
+                    viewDirect={viewDirect}
                     onClick={handleSetViewDirect}
                   />
                 );
