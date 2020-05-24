@@ -18,6 +18,7 @@
     width: 100%;
     display: flex;
     background-color: #f8f9fa;
+    position: relative;
 }
 
 .content-chat-default{
@@ -27,33 +28,58 @@
 
 .content-chat-logo-default{
     border-radius: 50%;
-    border: 2px solid #000;
-    width: 100px;
-    height: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0 auto;
-    margin-bottom: 24px;
-}
-
-.dark .content-chat-logo-default{
-    filter: invert();
+    margin-bottom: 38px;
 }
 
 .chat-logo-default{
-    width: 50px;
+    width: auto;
 }
 
 .chat-title-default{
     text-align: center;
-    margin-bottom: 8px;
+    font-size: 36px;
+    font-weight: 300;
+    margin-bottom: 24px;
+    color: #565656;
 }
 
 .chat-desc-default{
-    font-size: 0.8em;
+    font-size: 0.7em;
     color: #AAA;
-    margin-bottom: 24px;
+    margin-bottom: 34px;
+    max-width: 460px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.chat-line-default{
+    border: 0.1px solid rgba(0, 0, 0, 0.1);
+    margin-bottom: 34px;
+}
+
+.chat-icon-laptop-default{
+    width: 16px;
+    margin-right: 5px;
+    margin-top: 5px;
+}
+
+.chat-url-default{
+    margin-left: 5px;
+    font-weight: 400;
+    color: #07BC4C;
+}
+
+.chat-border-bottom{
+    background-color: #4adf83;
+    height: 6px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
 }
 
 .content-header-chat{

@@ -1,11 +1,11 @@
 import React, {useState, useEffect} from "react";
-import direct from "img/direct.svg";
 import "./css.css";
 import Comment from "components/InputChat";
 import verify from "img/verify.svg";
 import getChatUser from 'components/services/getChatUser';
 import sendMessage from 'components/services/sendMessage';
 import Loading from "components/Loading";
+import laptop from 'img/laptop.svg';
 
 
 export default function Chat(props) {
@@ -36,14 +36,16 @@ export default function Chat(props) {
         <div className="content-default">
           <div className="content-chat-default">
             <div className="content-chat-logo-default">
-              <img className="chat-logo-default" src={direct} alt="Direct" />
+              <img className="chat-logo-default" src="https://web.whatsapp.com/img/intro-connection_c98cc75f2aa905314d74375a975d2cf2.jpg" alt="Direct" />
             </div>
-            <p className="chat-title-default">Tus mensajes</p>
+            <p className="chat-title-default">Mantén tu telefono conectado</p>
             <p className="chat-desc-default">
-              Envía fotos y mensajes privados a un amigo o grupo.
+              JuantsApp se conecta a tu teléfono para sincronizar los mensajes. Para reducir el consumo de tus datos, conecta tu teléfono a una red Wi-Fi.
             </p>
-            <button onClick={() => {props.setNewChat(true)}} className="button follow">Enviar mensaje</button>
+            <hr className="chat-line-default" />
+            <p className="chat-desc-default"><span><img src={laptop} alt="Laptop" className="chat-icon-laptop-default"/></span>JuantsApp está disponible para Windows.<a className="chat-url-default" href="www.google.com">Obtenlo aquí.</a></p>
           </div>
+          <div className="chat-border-bottom"></div>
         </div>
       </div>
     );

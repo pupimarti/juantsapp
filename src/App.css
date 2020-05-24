@@ -1,12 +1,12 @@
 .light, .dark ::selection{
-  color: #262626;
+  color: #525252;
   background-color: #FAFAFA;
   transition: .3s ease all;
 }
 
 
 .dark, .light ::selection {
-  background-color: #262626;
+  background-color: #525252;
   color: #edefee;
   transition: .3s ease all;
 }
