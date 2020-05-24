@@ -6,6 +6,7 @@ import getChatUser from "components/services/getChatUser";
 import sendMessage from "components/services/sendMessage";
 import Loading from "components/Loading";
 import laptop from "img/laptop.svg";
+import ReactTimeAgo from 'react-time-ago';
 
 export default function Chat(props) {
   const [messages, setMessages] = useState(null);
@@ -97,13 +98,33 @@ export default function Chat(props) {
             messages.map((m, i) =>
               m.own ? (
                 <div key={i} className="content-chat-message own">
-                  <div className="chat-message own">{m.message}</div>
+                  <div className="chat-message own">{m.message}
+                  <p className="chat-message-time">
+                          {" "}
+                          {m.time && (
+                            <ReactTimeAgo
+                              date={new Date(m.time)}
+                              timeStyle="twitter"
+                              locale="es"
+                            />
+                          )}
+                    </p></div>
                 </div>
               ) : (
                 <div key={i} className="content-chat-message">
                   <div to={"/" + props.direct.user}>
                   </div>
-                  <div className="chat-message">{m.message}</div>
+                  <div className="chat-message">{m.message}
+                  <p className="chat-message-time">
+                          {" "}
+                          {m.time && (
+                            <ReactTimeAgo
+                              date={new Date(m.time)}
+                              timeStyle="twitter"
+                              locale="es"
+                            />
+                          )}
+                    </p></div>
                 </div>
               )
             )}
