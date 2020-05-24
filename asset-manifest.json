@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/juantsapp/static/css/main.5f361e03.chunk.css",
+    "main.js": "/juantsapp/static/js/main.53afdf2c.chunk.js",
+    "main.js.map": "/juantsapp/static/js/main.53afdf2c.chunk.js.map",
+    "runtime-main.js": "/juantsapp/static/js/runtime-main.62e77619.js",
+    "runtime-main.js.map": "/juantsapp/static/js/runtime-main.62e77619.js.map",
+    "static/js/2.429af135.chunk.js": "/juantsapp/static/js/2.429af135.chunk.js",
+    "static/js/2.429af135.chunk.js.map": "/juantsapp/static/js/2.429af135.chunk.js.map",
+    "index.html": "/juantsapp/index.html",
+    "precache-manifest.dbc9379b93fbc2b2128ded61f99efa71.js": "/juantsapp/precache-manifest.dbc9379b93fbc2b2128ded61f99efa71.js",
+    "service-worker.js": "/juantsapp/service-worker.js",
+    "static/css/main.5f361e03.chunk.css.map": "/juantsapp/static/css/main.5f361e03.chunk.css.map",
+    "static/js/2.429af135.chunk.js.LICENSE.txt": "/juantsapp/static/js/2.429af135.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/juantsapp/static/media/logo.5d5d9eef.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.62e77619.js",
+    "static/js/2.429af135.chunk.js",
+    "static/css/main.5f361e03.chunk.css",
+    "static/js/main.53afdf2c.chunk.js"
+  ]
+}
