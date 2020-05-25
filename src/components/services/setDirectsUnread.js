@@ -6,7 +6,7 @@ export default function setDirectsRead(user, user_direct, directs, setDirectsCon
         if(u.user === user){
             for(var d of u.directs){
                 if(d.user === user_direct){
-                    d.read = true;
+                    d.unread = 0;
                     setDirectsContext(arr_directs);
                     return true;
                 }

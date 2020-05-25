@@ -98,6 +98,7 @@ export default function Directs(props) {
           {data &&
             data.map((d, i) => {
               const user = getUserMin(d.user);
+              
               if (user !== null)
                 return (
                   <Direct
@@ -109,7 +110,7 @@ export default function Directs(props) {
                     message={d.messages[d.messages.length - 1].message}
                     time={d.messages[d.messages.length - 1].time}
                     own={d.messages[d.messages.length - 1].own}
-                    read={d.read}
+                    unread={d.unread}
                     viewDirect={viewDirect}
                     onClick={handleSetViewDirect}
                   />

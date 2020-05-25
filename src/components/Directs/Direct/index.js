@@ -8,7 +8,7 @@ export default function Direct(props) {
 
   const getClass = () => {
     let direct_class = "content-direct";
-    if(!props.read) direct_class += " unread";
+    if(props.unread > 0) direct_class += " unread";
     if(props.viewDirect){
       if(props.viewDirect.user === props.user) direct_class += " select";
     }
@@ -57,7 +57,7 @@ export default function Direct(props) {
         </div>
       </div>
       <p className="time-notif">{getDateString(props.time, true)}</p>
-      <div className={props.read ? "invisible" : "direct-unread"}>3</div>
+        <div className={props.unread <= 0 ? "invisible" : "direct-unread"}>{props.unread}</div>
         <hr className="direct-line-bottom" />
     </div>
   );

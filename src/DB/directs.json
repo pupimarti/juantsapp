@@ -4,7 +4,7 @@
         "directs":[
             {
                 "user":"pupi_marti",
-                "read":false,
+                "unread":2,
                 "messages":[
                     {
                         "message":"¡Bienvenido! Te comento que todo visitante entra con la cuenta 'default' para facilitar la visita a la web. Podes cambiar los colores entre modo oscuro o claro, responder mensajes, comentar/dar me gusta a publicaciones, vistar perfiles, seguir o dejar de seguir usuarios y hacer publicaciones!",
@@ -18,7 +18,7 @@
             },
             {
                 "user":"leomessi",
-                "read":false,
+                "unread":1,
                 "messages":[
                     {
                         "message":"Bienvenido!!",
