@@ -12,13 +12,81 @@ import check from "img/check.svg";
 export default function Chat(props) {
   const [messages, setMessages] = useState(null);
 
-  function getHour(time){
+  const getHour = (time) => {
     const date = new Date(time);
     return date.toLocaleTimeString(navigator.language, {
-      hour: '2-digit',
-      minute:'2-digit'
+      hour: "2-digit",
+      minute: "2-digit",
     });
+  };
+
+  const getDateString = (time) => {
+    const date = new Date(time);
+    return date.getDate() + "/" + (date.getMonth() + 1) + "/"+ date.getFullYear();
   }
+
+  const compareDate = (date_message, date) => {
+    const date_msg = new Date(date_message);
+    const date_origin = new Date(date);
+    
+    if (date_msg.getDate() !== date_origin.getDate()) {
+      date = date_msg;
+      return false;
+    }
+    return true;
+  };
+
+  const getMessages = () => {
+    let arr_msg = [];
+    if (messages) {
+      for (let i = 0; i < messages.length; i++) {
+        let date;
+        if (i > 0) date = new Date(messages[i - 1].time);
+        else date = new Date();
+        if (!compareDate(messages[i].time, date))
+          arr_msg.push(
+            <div key={i + 564} className="content-chat-day">
+              <p className="chat-day">{getDateString(messages[i].time)}</p>
+            </div>
+          );
+        if (messages[i].own)
+          arr_msg.push(
+            <React.Fragment key={i + messages[i].time}>
+              <div className="content-chat-message own">
+                <div className="chat-message own">
+                  <p className="message-chat">{messages[i].message}</p>
+                  <p className="chat-message-time">
+                    {getHour(messages[i].time)}
+                    <span>
+                      <img
+                        src={check}
+                        alt={"check"}
+                        className="chat-message-check"
+                      />
+                    </span>
+                  </p>
+                </div>
+              </div>
+            </React.Fragment>
+          );
+        else
+          arr_msg.push(
+            <React.Fragment key={i}>
+              <div className="content-chat-message">
+                <div></div>
+                <div className="chat-message">
+                  <p className="message-chat">{messages[i].message}</p>
+                  <p className="chat-message-time">
+                    {getHour(messages[i].time)}
+                  </p>
+                </div>
+              </div>
+            </React.Fragment>
+          );
+      }
+    }
+    return arr_msg;
+  };
 
   useEffect(() => {
     if (props.direct !== null) {
@@ -30,7 +98,7 @@ export default function Chat(props) {
     }
   }, [messages, props]);
 
-  const handleSendMessage = async (message) => {
+  const handleSendMessage = (message) => {
     const chat = sendMessage(
       "default",
       props.direct.user,
@@ -103,40 +171,16 @@ export default function Chat(props) {
               <img src={search} alt="search" className="icon" />
               <img src={clip} alt="clip" className="icon" />
               <div className="menu">
-                  <div className="point"></div>
-                  <div className="point"></div>
-                  <div className="point"></div>
-                </div>
+                <div className="point"></div>
+                <div className="point"></div>
+                <div className="point"></div>
+              </div>
             </div>
           </div>
         </div>
       </header>
       <div className="chat-content-messages">
-        <div className="center-width">
-          {messages &&
-            messages.map((m, i) =>
-              m.own ? (
-                <div key={i} className="content-chat-message own">
-                  <div className="chat-message own"><p className="message-chat">{m.message}</p>
-                  <p className="chat-message-time">
-                          {getHour(m.time)}
-                          <span><img src={check} alt={"check"} className="chat-message-check" /></span>
-                    </p></div>
-                </div>
-              ) : (
-                <div key={i} className="content-chat-message">
-                  <div>
-                  </div>
-                  <div className="chat-message"><p className="message-chat">{m.message}</p>
-                  <p className="chat-message-time">
-                    {m.time &&
-                    ""+getHour(m.time)
-                    }
-                    </p></div>
-                </div>
-              )
-            )}
-        </div>
+        <div className="center-width">{getMessages()}</div>
       </div>
       {messages === null && <Loading />}
       <div className="chat-content-comment">
