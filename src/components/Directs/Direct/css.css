@@ -50,12 +50,16 @@
 
 .direct-line-bottom{
     background-color: #f5f5f5;
-    width: 77%;
+    width: calc(100% - 85px);
     height: 0.7px;
     border: none;
     position: absolute;
     bottom: -10px;
     right: 5px;
+}
+
+.direct-line-bottom{
+    background-color: #ddd;
 }
 
 .direct-user, .direct-message{

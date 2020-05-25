@@ -58,8 +58,10 @@
 }
 
 .icon{
-  width: 22px;
-  height: 22px;
+  width: 1.1em;
+  max-width: 22px;
+  height: 1.1em;
+  max-height: 22px;
   margin: 0 15px;
 }
 
