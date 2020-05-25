@@ -7,33 +7,16 @@ import Loading from "components/Loading";
 import laptop from "img/laptop.svg";
 import search from "img/search.svg";
 import clip from "img/clip.svg";
-import Message from './Message';
+import Message from "./Message";
+import Day from "./Day";
 
 export default function Chat(props) {
   const [messages, setMessages] = useState(null);
 
-  const getDateString = (time) => {
-    const date = new Date(time);
-    var Difference_In_Time = date.getTime() - new Date().getTime(); 
-    // To calculate the no. of days between two dates 
-    var Difference_In_Days = Difference_In_Time / (1000 * 3600 * 24); 
-    
-    if(Difference_In_Days > -1 && (date.getDay() === new Date().getDay()))
-      return "HOY";
-    else if(Difference_In_Days > -2 && (date.getDay() === new Date().getDay() - 1))
-      return "AYER";
-    else if(Difference_In_Days > -7){
-      let days = ['DOMINGO', 'LUNES', 'MARTES', 'MIÉRCOLES', 'JUEVES', 'VIERNES', 'SÁBADO'];
-      return days[date.getDay()];
-    }
-      else
-    return date.getDate() + "/" + (date.getMonth() + 1) + "/"+ date.getFullYear();
-  }
-
   const compareDate = (date_message, date) => {
     const date_msg = new Date(date_message);
     const date_origin = new Date(date);
-    
+
     if (date_msg.getDate() !== date_origin.getDate()) {
       date = date_msg;
       return false;
@@ -48,16 +31,17 @@ export default function Chat(props) {
         let date;
         if (i > 0) date = new Date(messages[i - 1].time);
         else date = new Date();
-        
+
         if (!compareDate(messages[i].time, date))
-          arr_msg.push(
-            <div key={i + 564} className="content-chat-day">
-              <p className="chat-day">{getDateString(messages[i].time)}</p>
-            </div>
-          );
-        arr_msg.push(<Message time={messages[i].time}
+          arr_msg.push(<Day key={i} time={messages[i].time} />);
+        arr_msg.push(
+          <Message
+            key={i + messages[i].message}
+            time={messages[i].time}
             message={messages[i].message}
-            own={messages[i].own} />)
+            own={messages[i].own}
+          />
+        );
       }
     }
     return arr_msg;

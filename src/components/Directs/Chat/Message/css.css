@@ -103,3 +103,15 @@
 .dark .chat-message.own .chat-message-time{
     color: #525151;
 }
+  
+@media screen and (max-width:1300px){
+    .chat-message{
+        max-width: 75%;
+    }
+  }
+
+@media screen and (max-width:1300px){
+    .chat-message{
+        max-width: 85%;
+    }
+}

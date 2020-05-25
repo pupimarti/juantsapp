@@ -1,7 +1,7 @@
 import React from "react";
-import ReactTimeAgo from "react-time-ago";
 
 import "./css.css";
+import getDateString from "components/services/getDateString";
 
 export default function Direct(props) {
 
@@ -46,16 +46,7 @@ export default function Direct(props) {
           </p>
         </div>
       </div>
-      <p className="time-notif">
-              {" "}
-              {props.time && (
-                <ReactTimeAgo
-                  date={new Date(props.time)}
-                  timeStyle="twitter"
-                  locale="es"
-                />
-              )}
-            </p>
+      <p className="time-notif">{getDateString(props.time, true)}</p>
       <div className={props.read ? "invisible" : "direct-unread"}></div>
         <hr className="direct-line-bottom" />
     </div>

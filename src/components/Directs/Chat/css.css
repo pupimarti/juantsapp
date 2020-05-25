@@ -151,24 +151,6 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
     position: absolute;
 }
 
-.content-chat-day{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.chat-day{
-    background-color: #e1f5feeb;    
-    box-shadow: 0 1px .5px rgba(0,0,0,.13);
-    padding: 10px;
-    border-radius: 7.5px;
-    font-size: 0.7em;
-    margin-bottom: 8px;
-}
-
-.dark .chat-day{
-    filter: invert();
-}
 
 
 @media screen and (max-width:1440px){
@@ -176,18 +158,6 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
         width: 65%;
     }
   }
-  
-@media screen and (max-width:1300px){
-    .chat-message{
-        max-width: 75%;
-    }
-  }
-
-@media screen and (max-width:1300px){
-    .chat-message{
-        max-width: 85%;
-    }
-}
  
   
 

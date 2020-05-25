@@ -83,6 +83,7 @@
     position: absolute;
     right: 10px;
     color: #999999;
+    text-transform: lowercase;
     font-size: 0.6em;
     top: 10px;
 }
