@@ -1,13 +1,8 @@
 import React, {useState} from 'react';
 import Directs from './components/Directs'
 import { AppContextProvider } from "components/Context/AppContext";
-import JavascriptTimeAgo from "javascript-time-ago";
-import es from "javascript-time-ago/locale/es";
 
 import './App.css';
-
-
-JavascriptTimeAgo.locale(es);
 
 function App() {
 
