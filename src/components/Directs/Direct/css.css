@@ -12,8 +12,16 @@
     background-color: #f5f5f5;
 }
 
+.dark .content-direct:hover{
+    background-color: #eee;
+}
+
 .content-direct.select{
-    background-color: #ebebeb !important;
+    background-color: #ebebeb;
+}
+
+.dark .content-direct.select{
+    background-color: #ddd ;
 }
 
 .direct{
@@ -56,6 +64,10 @@
 
 .direct-message{
     color: rgba(0, 0, 0, 0.6);
+}
+
+.dark .direct-message{
+    color: #aaa;
 }
 
 .unread .direct-user, .unread .direct-message{

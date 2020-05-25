@@ -44,13 +44,6 @@ html {
   background: hsla(0,0%,100%,.1);
 }
 
-
-.dark a{
-  text-decoration: none;
-  color: #edefee;
-}
-
 a{
   text-decoration: none;
-  color: #262626;
 }

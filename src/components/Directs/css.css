@@ -7,10 +7,6 @@
     display: flex;
 }
 
-.dark .content-directs{
-    border: 1px solid #525151;
-}
-
 .center-width{
     width: 93%;
     margin: 0 auto;
@@ -26,10 +22,6 @@
 .content-directs-header{
     border-bottom: 1px solid #dbdbdb;
     background-color: #ededed;
-}
-
-.dark .content-directs-header{
-    border-bottom: 1px solid #525151;
 }
 
 .content-directs-header .center-width.header{

@@ -7,6 +7,7 @@ import Chat from "./Chat";
 import New from "./New";
 import history from 'img/history.svg';
 import Search from './Search';
+import SwitchMode from 'components/SwitchMode';
 
 import "./css.css";
 
@@ -16,7 +17,7 @@ import Context from "components/Context/AppContext";
 import setDirectsRead from "components/services/setDirectsUnread";
 import addDirectChat from "components/services/addDirectChat";
 
-export default function Directs() {
+export default function Directs(props) {
   const [data, setData] = useState("loading");
 
   const [viewDirect, setViewDirect] = useState(null);
@@ -71,6 +72,7 @@ export default function Directs() {
           <div className="center-width header">
             <img className="directs-header-img" src={user.picture} alt="your img" />
             <div className="content-actions-header">
+              <SwitchMode setMode={props.setMode} />
               <img 
               className="icon"
               src={history}

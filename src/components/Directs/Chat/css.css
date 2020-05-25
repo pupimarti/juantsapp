@@ -9,10 +9,6 @@
     position: relative;
 }
 
-.dark .content-chat{
-    border-left: 1px solid #525151;
-}
-
 .content-default{
     height: 100%;
     width: 100%;
@@ -74,12 +70,21 @@
     color: #07BC4C;
 }
 
+.dark .chat-url-default{
+    filter: invert();
+    color: rgb(3, 124, 50);
+}
+
 .chat-border-bottom{
     background-color: #4adf83;
     height: 6px;
     width: 100%;
     position: absolute;
     bottom: 0;
+}
+
+.dark .chat-border-bottom{
+    filter: invert();
 }
 
 .content-header-chat{
@@ -92,11 +97,6 @@
     border-bottom: 1px solid #dbdbdb;
     background-color: #ededed;
 }
-
-.dark .content-header-chat{
-    border-bottom: 1px solid #525151;
-}
-
 .header-chat{
     display: flex;
     align-items: center;
@@ -118,12 +118,6 @@
     transform: rotate(45deg);
     cursor:pointer;
 }
-
-.dark .chat-back{
-    border-left: 2px solid #dbdbdb;
-    border-bottom: 2px solid #dbdbdb;
-}
-
 .chat-user-img{
     width: 40px;
     height: 40px;
@@ -176,6 +170,13 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
     position: relative;
 }
 
+.dark .chat-message{
+    filter: invert();
+    background-color: #525151;
+    border: 1px solid #525151;
+    color: #fff;
+}
+
 .chat-message::after{
     content:"";
     width: 15px; 
@@ -189,9 +190,13 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
     -o-transform: skew(20deg);
     transform: skew(20deg);
     position: absolute;
-    top:0;
+    top:-1px;
     left:-2px;
     right: unset;
+}
+
+.dark .chat-message::after{
+    background-color: #525151;
 }
 
 .message-chat{
@@ -207,15 +212,14 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
     padding-bottom: 8px;
 }
 
+.dark .chat-message-time{
+    filter: invert();
+}
+
 .chat-message-check{
     width: 15px;
     margin-left: 3px;
     margin-bottom: -3px;
-}
-
-
-.dark .chat-message{
-    border: 1px solid #525151;
 }
 
 .chat-message.own{
@@ -234,7 +238,11 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
 }
 
 .dark .chat-message.own{
-    background-color: #525151;
+    color: #525151;
+}
+
+.dark .chat-message.own .chat-message-time{
+    color: #525151;
 }
 
 .chat-content-comment{
@@ -280,8 +288,5 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
         z-index: 100;
         background-color: #FAFAFA;
         max-height: 54px;
-    }
-    .dark .chat-content-comment{
-        background-color: #262626;
     }
 }

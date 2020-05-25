@@ -7,10 +7,6 @@
     transition: all .3s ease; 
     z-index: 5;
 }
-.dark .content-navBar{
-    background-color: #1e1e1e;
-    border-bottom: #525151 1px solid;
-}
 .navbar{
     display: flex;
     justify-content: space-between;
