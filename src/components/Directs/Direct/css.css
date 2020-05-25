@@ -65,13 +65,18 @@
 }
 
 .dark .direct-message{
-    color: #aaa;
+    filter: invert();
+    color:#777;
 }
 
 .unread .direct-user, .unread .direct-message{
     font-weight: 500;
-    color: inherit;
+    color: #000;
 }
+
+.dark .unread  .direct-message{
+    color: #fff;
+}  
 
 .time-notif{
     position: absolute;

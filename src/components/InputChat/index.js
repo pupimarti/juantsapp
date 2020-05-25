@@ -15,8 +15,10 @@ export default function InputChat(props) {
   const [openEmojis, setOpenEmojis] = useState(false);
 
   const onEmojiClick = (e, emojiObject) => {
-    let string = message + emojiObject.emoji;
-    setMessage(string)
+    let string = message +  emojiObject.emoji;
+    setMessage(string);
+    setOpenEmojis(false);
+    input.focus();
   }
 
   useEffect(() => {
