@@ -1,5 +1,6 @@
 import React from "react";
 
+import check from "img/check.svg";
 import "./css.css";
 import getDateString from "components/services/getDateString";
 
@@ -40,14 +41,23 @@ export default function Direct(props) {
             <p>{props.name}</p>
           </div>
           <p className="direct-message">
-            {props.message.length > 30
-              ? props.message.substring(0, 30) + "..."
+          {props.own && 
+                <span>
+                    <img
+                    src={check}
+                    alt={"check"}
+                    className="chat-message-check"
+                    />
+                </span>
+            }
+            {props.message.length > 25
+              ? props.message.substring(0, 25) + "..."
               : props.message}
           </p>
         </div>
       </div>
       <p className="time-notif">{getDateString(props.time, true)}</p>
-      <div className={props.read ? "invisible" : "direct-unread"}></div>
+      <div className={props.read ? "invisible" : "direct-unread"}>3</div>
         <hr className="direct-line-bottom" />
     </div>
   );

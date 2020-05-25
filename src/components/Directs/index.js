@@ -108,6 +108,7 @@ export default function Directs(props) {
                     verify={user.verify}
                     message={d.messages[d.messages.length - 1].message}
                     time={d.messages[d.messages.length - 1].time}
+                    own={d.messages[d.messages.length - 1].own}
                     read={d.read}
                     viewDirect={viewDirect}
                     onClick={handleSetViewDirect}

@@ -42,12 +42,6 @@
     font-size: 0.85em !important;
 }
 
-.verify-directs{
-    width:14px;
-    margin-left: 5px;
-    height: 20px;
-}
-
 .direct-line-bottom{
     background-color: #f5f5f5;
     width: calc(100% - 85px);
@@ -88,11 +82,25 @@
     top: 10px;
 }
 
+.unread .time-notif{
+    color: rgba(0, 0, 0, .8)
+}
+
 .direct-unread{
     position: absolute;
-    background-color: #0095f6;
-    width: 8px;
-    height: 8px;
+    background-color: #06d755;
+    color:#fff;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    width: 20.39px;
+    height: 20.39px;
     border-radius: 50%;
     right: 10px;
+}
+
+.dark .direct-unread{
+    filter: invert();
 }
