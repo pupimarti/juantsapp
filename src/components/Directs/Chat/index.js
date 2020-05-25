@@ -7,21 +7,26 @@ import Loading from "components/Loading";
 import laptop from "img/laptop.svg";
 import search from "img/search.svg";
 import clip from "img/clip.svg";
-import check from "img/check.svg";
+import Message from './Message';
 
 export default function Chat(props) {
   const [messages, setMessages] = useState(null);
 
-  const getHour = (time) => {
-    const date = new Date(time);
-    return date.toLocaleTimeString(navigator.language, {
-      hour: "2-digit",
-      minute: "2-digit",
-    });
-  };
-
   const getDateString = (time) => {
     const date = new Date(time);
+    var Difference_In_Time = date.getTime() - new Date().getTime(); 
+    // To calculate the no. of days between two dates 
+    var Difference_In_Days = Difference_In_Time / (1000 * 3600 * 24); 
+    
+    if(Difference_In_Days > -1 && (date.getDay() === new Date().getDay()))
+      return "HOY";
+    else if(Difference_In_Days > -2 && (date.getDay() === new Date().getDay() - 1))
+      return "AYER";
+    else if(Difference_In_Days > -7){
+      let days = ['DOMINGO', 'LUNES', 'MARTES', 'MIÉRCOLES', 'JUEVES', 'VIERNES', 'SÁBADO'];
+      return days[date.getDay()];
+    }
+      else
     return date.getDate() + "/" + (date.getMonth() + 1) + "/"+ date.getFullYear();
   }
 
@@ -43,46 +48,16 @@ export default function Chat(props) {
         let date;
         if (i > 0) date = new Date(messages[i - 1].time);
         else date = new Date();
+        
         if (!compareDate(messages[i].time, date))
           arr_msg.push(
             <div key={i + 564} className="content-chat-day">
               <p className="chat-day">{getDateString(messages[i].time)}</p>
             </div>
           );
-        if (messages[i].own)
-          arr_msg.push(
-            <React.Fragment key={i + messages[i].time}>
-              <div className="content-chat-message own">
-                <div className="chat-message own">
-                  <p className="message-chat">{messages[i].message}</p>
-                  <p className="chat-message-time">
-                    {getHour(messages[i].time)}
-                    <span>
-                      <img
-                        src={check}
-                        alt={"check"}
-                        className="chat-message-check"
-                      />
-                    </span>
-                  </p>
-                </div>
-              </div>
-            </React.Fragment>
-          );
-        else
-          arr_msg.push(
-            <React.Fragment key={i}>
-              <div className="content-chat-message">
-                <div></div>
-                <div className="chat-message">
-                  <p className="message-chat">{messages[i].message}</p>
-                  <p className="chat-message-time">
-                    {getHour(messages[i].time)}
-                  </p>
-                </div>
-              </div>
-            </React.Fragment>
-          );
+        arr_msg.push(<Message time={messages[i].time}
+            message={messages[i].message}
+            own={messages[i].own} />)
       }
     }
     return arr_msg;
