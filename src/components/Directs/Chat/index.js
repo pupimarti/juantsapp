@@ -7,6 +7,7 @@ import Loading from "components/Loading";
 import laptop from "img/laptop.svg";
 import search from "img/search.svg";
 import clip from "img/clip.svg";
+import check from "img/check.svg";
 
 export default function Chat(props) {
   const [messages, setMessages] = useState(null);
@@ -116,16 +117,17 @@ export default function Chat(props) {
             messages.map((m, i) =>
               m.own ? (
                 <div key={i} className="content-chat-message own">
-                  <div className="chat-message own">{m.message}
+                  <div className="chat-message own"><p className="message-chat">{m.message}</p>
                   <p className="chat-message-time">
                           {getHour(m.time)}
+                          <span><img src={check} alt={"check"} className="chat-message-check" /></span>
                     </p></div>
                 </div>
               ) : (
                 <div key={i} className="content-chat-message">
                   <div>
                   </div>
-                  <div className="chat-message">{m.message}
+                  <div className="chat-message"><p className="message-chat">{m.message}</p>
                   <p className="chat-message-time">
                     {m.time &&
                     ""+getHour(m.time)
