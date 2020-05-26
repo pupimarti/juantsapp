@@ -1,4 +1,4 @@
-import users from 'DB/users-min.json';
+import users from 'DB/users.json';
 
 export default function getUserMin(user){
     for(var u of users)
