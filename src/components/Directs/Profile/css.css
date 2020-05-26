@@ -5,7 +5,7 @@
 }
 
 .center-stat{
-    width: 85%;
+    width: 95%;
     margin: 0 auto;
 }
 
@@ -15,27 +15,6 @@
     max-width: 100%;
     margin: 28px 0;
     border-radius: 50%;
-}
-
-.content-stat{
-    padding: 14px 30px 10px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
-    margin-bottom: 10px;
-    background-color: #fff;
-}
-
-.title-stat{
-    color: #009688;
-    font-size: 14px;
-    text-align: start;
-    margin-bottom: 14px;
-}
-
-.stat{
-    color: #4A4A4A;
-    font-size: 17px;
-    text-align: start;
-    margin: 8px 0;
 }
 
 .info-stat{

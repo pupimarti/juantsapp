@@ -1,4 +1,5 @@
 import React from "react";
+import Stat from 'components/Directs/Stat';
 import "./css.css";
 
 export default function Profile(props) {
@@ -21,23 +22,13 @@ export default function Profile(props) {
             className="profile-img"
           />
         </div>
-        <div className="content-stat">
-          <div className="center-stat">
-            <p className="title-stat">Tu nombre</p>
-            <p className="stat">{props.user.name}</p>
-          </div>
-        </div>
+        <Stat title="Tu nombre" desc={props.user.name} />
         <div className="center-stat">
             <p className="info-stat">
                 Este no es tu nombre de usuario ni un PIN. Este nombre será visible para tus contactos de JuantsApp.
             </p>
         </div>
-        <div className="content-stat">
-          <div className="center-stat">
-            <p className="title-stat">Info.</p>
-            <p className="stat">{props.user.desc}</p>
-          </div>
-        </div>
+        <Stat title="Info." desc={props.user.desc} />
       </div>
     </div>
   );

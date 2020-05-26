@@ -1,0 +1,58 @@
+.content-stat{
+    padding: 14px 30px 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    margin-bottom: 10px;
+    background-color: #fff;
+}
+
+.title-stat{
+    color: #009688;
+    font-size: 14px;
+    text-align: start;
+    margin-bottom: 14px;
+}
+
+.dark .title-stat{
+    filter: invert();
+}
+
+.stat, .stat-input{
+    color: #4A4A4A;
+    font-size: 17px;
+    margin: 8px 0;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.content-input-stat{
+    position: relative;
+}
+
+.edit-input{
+    position: absolute;
+    top:0;
+    right: 0;
+}
+
+.stat-input{
+    border:none;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #009688;
+}
+
+.dark .stat-input{
+    background-color: #000;
+    color: #ededed;
+    filter: invert();
+}
+
+.stat-input:focus{
+    outline: none;
+}
+
+.edit-stat{
+    width: 16px;
+    cursor: pointer;
+}
