@@ -1,27 +1,31 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "1f149ea7cdbdd58a00554cc7e24d7294",
+    "revision": "db81097cb5ec60cb8fc3b5c7482d26ca",
     "url": "/juantsapp/index.html"
   },
   {
-    "revision": "ee8e37376500294c724e",
-    "url": "/juantsapp/static/css/main.91fa40ca.chunk.css"
+    "revision": "76d02f557d48818055ab",
+    "url": "/juantsapp/static/css/main.ad153a55.chunk.css"
   },
   {
-    "revision": "0d3d94683049dc16cd40",
-    "url": "/juantsapp/static/js/2.e3afdc7d.chunk.js"
+    "revision": "a01edc7bb9983e57b1f8",
+    "url": "/juantsapp/static/js/2.50dd1fe2.chunk.js"
   },
   {
     "revision": "e88a3e95b5364d46e95b35ae8c0dc27d",
-    "url": "/juantsapp/static/js/2.e3afdc7d.chunk.js.LICENSE.txt"
+    "url": "/juantsapp/static/js/2.50dd1fe2.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "ee8e37376500294c724e",
-    "url": "/juantsapp/static/js/main.5bb169f3.chunk.js"
+    "revision": "76d02f557d48818055ab",
+    "url": "/juantsapp/static/js/main.571ac747.chunk.js"
   },
   {
     "revision": "6879d99d3df77ad8040d",
     "url": "/juantsapp/static/js/runtime-main.62e77619.js"
+  },
+  {
+    "revision": "149434884919560f110a479621296d16",
+    "url": "/juantsapp/static/media/camera.14943488.svg"
   },
   {
     "revision": "3dc8183f808e4b2ab8130c5e421d84a1",
