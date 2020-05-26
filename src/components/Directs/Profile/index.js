@@ -1,9 +1,10 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import Stat from "components/Directs/Stat";
 import Context from "components/Context/AppContext";
-import camera from 'img/camera.svg';
+import camera from "img/camera.svg";
 import "./css.css";
 import setUser from "components/services/setUser";
+import Options from "components/Directs/Options";
 
 export default function Profile(props) {
   const { users, setUsers } = useContext(Context);
@@ -24,6 +25,19 @@ export default function Profile(props) {
     return setUser(user, users, setUsers);
   };
 
+  const options = [
+    {
+      "name":"Ver foto",
+      "action": {}
+    },
+    {
+      "name":"Subir foto",
+      "action":{}
+    }
+  ]
+
+  const [showOptions, setShowOptions] = useState(false);
+
   return (
     <div className="content-new-chat">
       <header className="content-new-chat-header">
@@ -42,12 +56,21 @@ export default function Profile(props) {
             alt="profile-img"
             className="profile-img"
           />
-          <div className="hover-img">
+          <div
+            onClick={() => setShowOptions(!showOptions)}
+            className={showOptions ? "hover-img select" : "hover-img"}
+          >
             <img src={camera} alt="camera" className="stat-camera-hover" />
             <p className="stat-text-hover">CAMBIAR FOTO DE PERFIL</p>
           </div>
+          {showOptions && <Options options={options} />}
         </div>
-        <Stat max={25} edit={editName} title="Tu nombre" desc={props.user.name} />
+        <Stat
+          max={25}
+          edit={editName}
+          title="Tu nombre"
+          desc={props.user.name}
+        />
         <div className="center-stat">
           <p className="info-stat">
             Este no es tu nombre de usuario ni un PIN. Este nombre será visible

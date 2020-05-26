@@ -43,6 +43,14 @@
     justify-content: center;
 }
 
+.dark .hover-img{
+    filter: invert();
+}
+
+.hover-img.select{
+    display: flex;
+}
+
 .stat-camera-hover{
     width: 25px;
     margin-bottom: 5px;

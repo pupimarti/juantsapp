@@ -1,0 +1,26 @@
+.content-options{
+    width: 100%;
+    max-width: 340px;
+    background-color: #fff;
+    border-radius: 3px;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.26),0 2px 10px 0 rgba(0,0,0,.16);
+    padding: 9px 0;
+    box-sizing: border-box;
+    z-index: 1000;
+}
+
+.option{
+    padding-left: 24px;
+    padding-right: 58px;
+    padding-top: 13px;
+    cursor: pointer;
+    color: #4a4a4a;
+    font-size: 14.5px;
+    height: 40px;
+    box-sizing: border-box;
+    text-align: start;
+}
+
+.option:hover{
+    background-color: #f5f5f5;
+}
