@@ -6,6 +6,11 @@ import "./css.css";
 export default function Stat(props) {
   const [edit, setEdit] = useState(false);
 
+  const handleEditUser = () => {
+    if(props.edit(desc))
+      setEdit(false);
+  }
+
   const [desc, setDesc] = useState(props.desc);
 
   return (
@@ -14,7 +19,7 @@ export default function Stat(props) {
         <p className="title-stat">{props.title}</p>
         {!edit ? (
           <p className="stat">
-            {props.desc}
+            {desc}
             <span>
               <img
                 src={pencil}
@@ -32,9 +37,7 @@ export default function Stat(props) {
             <img
               src={confirm}
               alt="confirm"
-              onClick={() => {
-                setEdit(false);
-              }}
+              onClick={handleEditUser}
               className="edit-stat edit-input"
             />
           </div>
