@@ -2,6 +2,7 @@
     text-align: center;
     background-color: #ededed !important;
     height: calc(100% - 108px);
+    padding-top: 28px;
 }
 
 .center-stat{
@@ -9,12 +10,48 @@
     margin: 0 auto;
 }
 
-.profile-img{
+.content-profile-img{
+    position: relative;
     width: 200px;
     height: 200px;
-    max-width: 100%;
-    margin: 28px 0;
+    margin-bottom: 28px;
+}
+
+.content-profile-img:hover .hover-img{
+    display: flex;
+    cursor: pointer;
+}
+
+.profile-img{
+    width: 100%;
+    height: 100%;
     border-radius: 50%;
+}
+
+.hover-img{
+    display: none;
+    position: absolute;
+    top: 0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+}
+
+.stat-camera-hover{
+    width: 25px;
+    margin-bottom: 5px;
+}
+
+.stat-text-hover{
+    width: 100%;
+    padding: 0 20%;
+    color: #FFF;
+    font-size: 0.7em;
 }
 
 .info-stat{
