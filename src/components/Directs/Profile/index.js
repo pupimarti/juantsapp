@@ -47,14 +47,14 @@ export default function Profile(props) {
             <p className="stat-text-hover">CAMBIAR FOTO DE PERFIL</p>
           </div>
         </div>
-        <Stat edit={editName} title="Tu nombre" desc={props.user.name} />
+        <Stat max={25} edit={editName} title="Tu nombre" desc={props.user.name} />
         <div className="center-stat">
           <p className="info-stat">
             Este no es tu nombre de usuario ni un PIN. Este nombre será visible
             para tus contactos de JuantsApp.
           </p>
         </div>
-        <Stat edit={editDesc} title="Info." desc={props.user.desc} />
+        <Stat max={50} edit={editDesc} title="Info." desc={props.user.desc} />
       </div>
     </div>
   );

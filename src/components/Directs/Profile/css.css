@@ -1,8 +1,9 @@
 .content-profile-stats{
     text-align: center;
     background-color: #ededed !important;
-    height: calc(100% - 108px);
+    min-height: calc(100% - 108px);
     padding-top: 28px;
+    box-sizing: border-box;
 }
 
 .center-stat{

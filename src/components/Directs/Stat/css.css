@@ -28,6 +28,21 @@
 
 .content-input-stat{
     position: relative;
+    border-bottom: 2px solid #009688;
+}
+
+.dark .content-input-stat{
+    background-color: #000;
+    color: #ededed;
+    filter: invert();
+}
+
+.max-length{
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 0.7em;
+    color: #999999;
 }
 
 .edit-input{
@@ -39,14 +54,16 @@
 .stat-input{
     border:none;
     padding-bottom: 5px;
-    border-bottom: 2px solid #009688;
+    max-width: 80%;
+    color: inherit;
+    background-color: inherit;
+    resize:none;
+    min-height:1.5em;
+    height: 1.5em;
+    max-height:5em;  
+    overflow:auto;
 }
 
-.dark .stat-input{
-    background-color: #000;
-    color: #ededed;
-    filter: invert();
-}
 
 .stat-input:focus{
     outline: none;

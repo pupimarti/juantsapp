@@ -13,6 +13,20 @@ export default function Stat(props) {
 
   const [desc, setDesc] = useState(props.desc);
 
+  const keyDown = e => {
+    if(desc.length >= props.max){
+      if(e.keyCode === 8){
+        let str = desc.substring(0, desc.length - 1);
+        setDesc(str);
+      }
+    }
+  }
+
+  const handleEditDesc = (e) => {
+    if(desc.length < props.max)
+      setDesc(e.target.value);
+  }
+
   return (
     <div className="content-stat">
       <div className="center-stat">
@@ -33,7 +47,10 @@ export default function Stat(props) {
           </p>
         ) : (
           <div className="content-input-stat">
-            <input type="text" value={desc} onChange={(e) => {setDesc(e.target.value)}} className="stat-input" />
+            <textarea type="text" value={desc} 
+            onKeyDown={keyDown}
+            onChange={handleEditDesc} className="stat-input" />
+            <span className="max-length">{props.max - desc.length}</span>
             <img
               src={confirm}
               alt="confirm"
