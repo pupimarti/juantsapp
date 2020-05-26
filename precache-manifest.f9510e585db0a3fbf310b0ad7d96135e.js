@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "666cd38c4c2a92a517c810982450f1de",
+    "revision": "1f149ea7cdbdd58a00554cc7e24d7294",
     "url": "/juantsapp/index.html"
   },
   {
-    "revision": "66d924b8b852fae30111",
-    "url": "/juantsapp/static/css/main.0532df92.chunk.css"
+    "revision": "ee8e37376500294c724e",
+    "url": "/juantsapp/static/css/main.91fa40ca.chunk.css"
   },
   {
     "revision": "0d3d94683049dc16cd40",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/juantsapp/static/js/2.e3afdc7d.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "66d924b8b852fae30111",
-    "url": "/juantsapp/static/js/main.d6f000d0.chunk.js"
+    "revision": "ee8e37376500294c724e",
+    "url": "/juantsapp/static/js/main.5bb169f3.chunk.js"
   },
   {
     "revision": "6879d99d3df77ad8040d",
