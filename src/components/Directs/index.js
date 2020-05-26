@@ -5,9 +5,10 @@ import Direct from "./Direct";
 import newMessage from "img/message.svg";
 import Chat from "./Chat";
 import New from "./New";
-import history from 'img/history.svg';
-import Search from './Search';
-import SwitchMode from 'components/SwitchMode';
+import Profile from "./Profile";
+import history from "img/history.svg";
+import Search from "./Search";
+import SwitchMode from "components/SwitchMode";
 
 import "./css.css";
 
@@ -26,6 +27,8 @@ export default function Directs(props) {
 
   const [newChat, setNewChat] = useState(false);
 
+  const [profile, setProfile] = useState(false);
+
   const { directs, setDirects } = useContext(Context);
 
   const handleSetViewDirect = (user) => {
@@ -37,15 +40,15 @@ export default function Directs(props) {
   };
 
   const handleAddChat = (user, user_follow) => {
-      addDirectChat(user, user_follow, directs, setDirects);
-  }
+    addDirectChat(user, user_follow, directs, setDirects);
+  };
 
   useEffect(() => {
     if (data === "loading") {
       const user = getUserMin("default");
       setUser(user);
       const directs_ = getDirects("default", directs);
-      if(directs_) setData(directs_.directs);
+      if (directs_) setData(directs_.directs);
       else setData([]);
     }
   }, [data, directs]);
@@ -61,18 +64,28 @@ export default function Directs(props) {
             : "content-list-directs viewdirect"
         }
       >
-        {newChat &&
-      <New user="default" setNewChat={setNewChat} setViewDirect={handleSetViewDirect} />}
-  
+        {newChat && (
+          <New
+            user="default"
+            setNewChat={setNewChat}
+            setViewDirect={handleSetViewDirect}
+          />
+        )}
+        {profile && <Profile setProfile={setProfile} 
+        user={user}/>}
         <header className="content-directs-header">
           <div className="center-width header">
-            <img className="directs-header-img" src={user.picture} alt="your img" />
+            <img
+              onClick={() => {
+                setProfile(true);
+              }}
+              className="directs-header-img"
+              src={user.picture}
+              alt="your img"
+            />
             <div className="content-actions-header">
               <SwitchMode setMode={props.setMode} />
-              <img 
-              className="icon"
-              src={history}
-              alt="history"/>
+              <img className="icon" src={history} alt="history" />
               <img
                 onClick={() => {
                   setNewChat(true);
@@ -88,15 +101,15 @@ export default function Directs(props) {
               </div>
             </div>
           </div>
-        <Search />
+          <Search />
         </header>
         <div className="content-directs-messages">
           {data &&
             data.map((d, i) => {
               const user = getUserMin(d.user);
-              
+
               if (user !== null)
-                if(d.messages.length > 0)
+                if (d.messages.length > 0)
                   return (
                     <Direct
                       key={i}
@@ -111,9 +124,9 @@ export default function Directs(props) {
                       viewDirect={viewDirect}
                       onClick={handleSetViewDirect}
                     />
-                    );
-                  else if(d.messages.length <= 0)
-                  return(
+                  );
+                else if (d.messages.length <= 0)
+                  return (
                     <Direct
                       key={i}
                       user={user.user}

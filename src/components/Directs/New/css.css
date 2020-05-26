@@ -1,6 +1,7 @@
 .content-new-chat{
     position: absolute;
     width: 100%;
+    height: 100%;
     max-width: 100%;
     background-color: #fff;
     z-index: 5;
