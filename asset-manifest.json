@@ -1,18 +1,17 @@
 {
   "files": {
-    "main.css": "/juantsapp/static/css/main.acc5cb2a.chunk.css",
-    "main.js": "/juantsapp/static/js/main.44034e25.chunk.js",
-    "main.js.map": "/juantsapp/static/js/main.44034e25.chunk.js.map",
+    "main.css": "/juantsapp/static/css/main.06d9645e.chunk.css",
+    "main.js": "/juantsapp/static/js/main.d8cf1224.chunk.js",
+    "main.js.map": "/juantsapp/static/js/main.d8cf1224.chunk.js.map",
     "runtime-main.js": "/juantsapp/static/js/runtime-main.62e77619.js",
     "runtime-main.js.map": "/juantsapp/static/js/runtime-main.62e77619.js.map",
-    "static/js/2.75783543.chunk.js": "/juantsapp/static/js/2.75783543.chunk.js",
-    "static/js/2.75783543.chunk.js.map": "/juantsapp/static/js/2.75783543.chunk.js.map",
+    "static/js/2.e8fefde9.chunk.js": "/juantsapp/static/js/2.e8fefde9.chunk.js",
+    "static/js/2.e8fefde9.chunk.js.map": "/juantsapp/static/js/2.e8fefde9.chunk.js.map",
     "index.html": "/juantsapp/index.html",
-    "precache-manifest.42eadbaee2e5d64cba1f7bf2a929cfa1.js": "/juantsapp/precache-manifest.42eadbaee2e5d64cba1f7bf2a929cfa1.js",
+    "precache-manifest.eb6e82108174c316d1ade5cdb3a61fb1.js": "/juantsapp/precache-manifest.eb6e82108174c316d1ade5cdb3a61fb1.js",
     "service-worker.js": "/juantsapp/service-worker.js",
-    "static/css/main.acc5cb2a.chunk.css.map": "/juantsapp/static/css/main.acc5cb2a.chunk.css.map",
-    "static/js/2.75783543.chunk.js.LICENSE.txt": "/juantsapp/static/js/2.75783543.chunk.js.LICENSE.txt",
-    "static/media/account.svg": "/juantsapp/static/media/account.71672f0b.svg",
+    "static/css/main.06d9645e.chunk.css.map": "/juantsapp/static/css/main.06d9645e.chunk.css.map",
+    "static/js/2.e8fefde9.chunk.js.LICENSE.txt": "/juantsapp/static/js/2.e8fefde9.chunk.js.LICENSE.txt",
     "static/media/check.svg": "/juantsapp/static/media/check.3dc8183f.svg",
     "static/media/clip.svg": "/juantsapp/static/media/clip.d21734f4.svg",
     "static/media/emoji.svg": "/juantsapp/static/media/emoji.27890e05.svg",
@@ -20,13 +19,12 @@
     "static/media/laptop.svg": "/juantsapp/static/media/laptop.d43dd5af.svg",
     "static/media/message.svg": "/juantsapp/static/media/message.6faa0a43.svg",
     "static/media/search.svg": "/juantsapp/static/media/search.11a139fb.svg",
-    "static/media/send.svg": "/juantsapp/static/media/send.7aeab33c.svg",
-    "static/media/verify.svg": "/juantsapp/static/media/verify.c884f427.svg"
+    "static/media/send.svg": "/juantsapp/static/media/send.7aeab33c.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.62e77619.js",
-    "static/js/2.75783543.chunk.js",
-    "static/css/main.acc5cb2a.chunk.css",
-    "static/js/main.44034e25.chunk.js"
+    "static/js/2.e8fefde9.chunk.js",
+    "static/css/main.06d9645e.chunk.css",
+    "static/js/main.d8cf1224.chunk.js"
   ]
 }
