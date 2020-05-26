@@ -52,13 +52,6 @@ export default function Directs(props) {
 
   if (data === "loading") return <Loading />;
 
-  if (newChat)
-    return (
-      <div className="content-directs">
-        <New user="default" setNewChat={setNewChat} setViewDirect={handleSetViewDirect} />
-      </div>
-    );
-
   return (
     <div className="content-directs">
       <div
@@ -68,6 +61,9 @@ export default function Directs(props) {
             : "content-list-directs viewdirect"
         }
       >
+        {newChat &&
+      <New user="default" setNewChat={setNewChat} setViewDirect={handleSetViewDirect} />}
+  
         <header className="content-directs-header">
           <div className="center-width header">
             <img className="directs-header-img" src={user.picture} alt="your img" />
@@ -100,21 +96,38 @@ export default function Directs(props) {
               const user = getUserMin(d.user);
               
               if (user !== null)
-                return (
-                  <Direct
-                    key={i}
-                    user={user.user}
-                    name={user.name}
-                    picture={user.picture}
-                    verify={user.verify}
-                    message={d.messages[d.messages.length - 1].message}
-                    time={d.messages[d.messages.length - 1].time}
-                    own={d.messages[d.messages.length - 1].own}
-                    unread={d.unread}
-                    viewDirect={viewDirect}
-                    onClick={handleSetViewDirect}
-                  />
-                );
+                if(d.messages.length > 0)
+                  return (
+                    <Direct
+                      key={i}
+                      user={user.user}
+                      name={user.name}
+                      picture={user.picture}
+                      verify={user.verify}
+                      message={d.messages[d.messages.length - 1].message}
+                      time={d.messages[d.messages.length - 1].time}
+                      own={d.messages[d.messages.length - 1].own}
+                      unread={d.unread}
+                      viewDirect={viewDirect}
+                      onClick={handleSetViewDirect}
+                    />
+                    );
+                  else if(d.messages.length <= 0)
+                  return(
+                    <Direct
+                      key={i}
+                      user={user.user}
+                      name={user.name}
+                      picture={user.picture}
+                      verify={user.verify}
+                      message=""
+                      time={null}
+                      own={false}
+                      unread={0}
+                      viewDirect={viewDirect}
+                      onClick={handleSetViewDirect}
+                    />
+                  );
               return null;
             })}
         </div>

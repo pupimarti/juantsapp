@@ -3,50 +3,51 @@ import React, {useState, useEffect, useContext} from 'react';
 import './css.css';
 import getUser from 'components/services/getUser';
 import userContext from 'components/Context/AppContext';
-import User from './User';
+import User from 'components/Directs/Direct';
+import Search from 'components/Directs/Search';
 import getUserMin from 'components/services/getUserMin';
 
 export default function New(props) {
 
     const {users} = useContext(userContext);
 
-    const [follows, setFollows] = useState(null);
-
-    const [select, setSelect] = useState(null);
+    const [contacts, setContacts] = useState(null);
 
     useEffect(() => {
-        if(follows === null){
+        if(contacts === null){
             const user = getUser(props.user, users);
             if(user !== null){
-                setFollows(user.follows);
+                setContacts(user.contacts);
             }
         }
-    }, [follows, props,users])
+    }, [contacts, props,users])
 
-    const handleSelect = () => {
-        if(select !== null){
-            props.setViewDirect(select);
+    const handleSelect = (user) => {
+        if(user !== null){
+            props.setViewDirect(user);
             props.setNewChat(false);
         }
-    }
+    } 
     
     return (
         <div className="content-new-chat">
-        <header className="content-directs-header">
-          <div onClick={() => props.setNewChat(false)} className="chat-back"></div>
-          <h5>Nuevo mensaje</h5>
-          <button onClick={handleSelect} className="action-comment">Siguiente</button>
+        <header className="content-new-chat-header">
+          <div className="new-chat-header">
+              <div onClick={() => props.setNewChat(false)} className="chat-back"></div>
+              <h5 className="new-chat-title-header">Nuevo chat</h5>
+          </div>
         </header>
-        {follows && follows.map((u,i) => {
+        <Search contacts />
+        {contacts && contacts.map((u,i) => {
             const user = getUserMin(u);
             return(
             <User 
                 key={i}
+                onlyUser={true}
                 user={user.user}
                 picture={user.picture}
-                verify={user.verify}
-                onClick={setSelect}
-                select={select}
+                name={user.name}
+                onClick={handleSelect}
             />)
         })}
         </div>

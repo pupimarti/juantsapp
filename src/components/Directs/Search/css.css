@@ -24,7 +24,7 @@
 
 .input-search{
     border: none;
-    width: 80%;
+    width: calc(100% - 20px);
     font-size: 0.7em;
 }
 

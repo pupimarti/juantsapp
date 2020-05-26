@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import searchIcon from "img/search.svg";
 import "./css.css";
-export default function Search() {
+export default function Search(props) {
   const [search, setSearch] = useState("");
 
   return (
@@ -11,7 +11,7 @@ export default function Search() {
         <input
           type="text"
           className="input-search"
-          placeholder="Buscar o empezar un chat nuevo"
+          placeholder={props.contacts ? "Buscar contactos" : "Buscar o empezar un chat nuevo"}
           onChange={(e) => setSearch(e.target.value)}
           value={search}
         />

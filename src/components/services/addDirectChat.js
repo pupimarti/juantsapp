@@ -4,11 +4,10 @@ export default function addDirectChat(user, user_direct, directs, setDirectsCont
         if(u.user === user){
             u.directs.push({
                 "user":user_direct,
-                "read":true,
+                "unread":0,
                 "messages":[]
             })
             setDirectsContext(arr_directs);
-            console.log(arr_directs);
             return true;
         }
     }
