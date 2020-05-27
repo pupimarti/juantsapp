@@ -13,7 +13,7 @@
 }
 
 .dark .title-stat{
-    filter: invert();
+    color: #70030c;
 }
 
 .stat, .stat-input{
