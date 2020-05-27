@@ -25,18 +25,19 @@ export default function Profile(props) {
     return setUser(user, users, setUsers);
   };
 
+
+  const [showOptions, setShowOptions] = useState(false);
+
   const options = [
     {
       "name":"Ver foto",
-      "action": {}
+      "action": () => props.handleSetShowPicture(props.user.user, props.user.picture)
     },
     {
       "name":"Subir foto",
       "action":{}
     }
   ]
-
-  const [showOptions, setShowOptions] = useState(false);
 
   return (
     <div className="content-new-chat">
@@ -50,14 +51,13 @@ export default function Profile(props) {
         </div>
       </header>
       <div className="content-profile-stats">
-        <div className="center-stat content-profile-img">
+        <div onClick={() => setShowOptions(!showOptions)} className="center-stat content-profile-img">
           <img
             src={props.user.picture}
             alt="profile-img"
             className="profile-img"
           />
           <div
-            onClick={() => setShowOptions(!showOptions)}
             className={showOptions ? "hover-img select" : "hover-img"}
           >
             <img src={camera} alt="camera" className="stat-camera-hover" />

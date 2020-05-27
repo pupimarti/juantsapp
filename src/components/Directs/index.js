@@ -9,6 +9,7 @@ import Profile from "./Profile";
 import history from "img/history.svg";
 import Search from "./Search";
 import SwitchMode from "components/SwitchMode";
+import ShowPicture from "components/Directs/ShowPicture";
 
 import "./css.css";
 
@@ -30,6 +31,12 @@ export default function Directs(props) {
   const [profile, setProfile] = useState(false);
 
   const { directs, setDirects } = useContext(Context);
+
+  const [showPicture, setShowPicture] = useState(null);
+
+  const handleSetShowPicture = (user, img) => {
+    setShowPicture({ user, img });
+  };
 
   const handleSetViewDirect = (user) => {
     if (user === null) setViewDirect(null);
@@ -55,6 +62,15 @@ export default function Directs(props) {
 
   if (data === "loading") return <Loading />;
 
+  if (showPicture)
+    return (
+      <ShowPicture
+        setShowPicture={setShowPicture}
+        img={showPicture.img}
+        user={showPicture.user}
+      />
+    );
+
   return (
     <div className="content-directs">
       <div
@@ -71,8 +87,13 @@ export default function Directs(props) {
             setViewDirect={handleSetViewDirect}
           />
         )}
-        {profile && <Profile setProfile={setProfile} 
-        user={user}/>}
+        {profile && (
+          <Profile
+            handleSetShowPicture={handleSetShowPicture}
+            setProfile={setProfile}
+            user={user}
+          />
+        )}
         <header className="content-directs-header">
           <div className="center-width header">
             <img
