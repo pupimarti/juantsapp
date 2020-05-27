@@ -35,7 +35,11 @@ export default function Profile(props) {
     },
     {
       "name":"Subir foto",
-      "action":{}
+      "action":() => console.log('subir foto')
+    },
+    {
+      "name":"Eliminar foto",
+      "action":() => console.log('eliminar foto')
     }
   ]
 
