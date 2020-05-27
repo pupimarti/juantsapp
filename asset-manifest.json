@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/juantsapp/static/css/main.bab8fc42.chunk.css",
-    "main.js": "/juantsapp/static/js/main.eec7502e.chunk.js",
-    "main.js.map": "/juantsapp/static/js/main.eec7502e.chunk.js.map",
+    "main.js": "/juantsapp/static/js/main.d47d1125.chunk.js",
+    "main.js.map": "/juantsapp/static/js/main.d47d1125.chunk.js.map",
     "runtime-main.js": "/juantsapp/static/js/runtime-main.62e77619.js",
     "runtime-main.js.map": "/juantsapp/static/js/runtime-main.62e77619.js.map",
     "static/js/2.50dd1fe2.chunk.js": "/juantsapp/static/js/2.50dd1fe2.chunk.js",
     "static/js/2.50dd1fe2.chunk.js.map": "/juantsapp/static/js/2.50dd1fe2.chunk.js.map",
     "index.html": "/juantsapp/index.html",
-    "precache-manifest.1d171628369ff878ec23c6533acfc219.js": "/juantsapp/precache-manifest.1d171628369ff878ec23c6533acfc219.js",
+    "precache-manifest.9e0fd321ea537dc6c16003872299c950.js": "/juantsapp/precache-manifest.9e0fd321ea537dc6c16003872299c950.js",
     "service-worker.js": "/juantsapp/service-worker.js",
     "static/css/main.bab8fc42.chunk.css.map": "/juantsapp/static/css/main.bab8fc42.chunk.css.map",
     "static/js/2.50dd1fe2.chunk.js.LICENSE.txt": "/juantsapp/static/js/2.50dd1fe2.chunk.js.LICENSE.txt",
@@ -28,6 +28,6 @@
     "static/js/runtime-main.62e77619.js",
     "static/js/2.50dd1fe2.chunk.js",
     "static/css/main.bab8fc42.chunk.css",
-    "static/js/main.eec7502e.chunk.js"
+    "static/js/main.d47d1125.chunk.js"
   ]
 }
