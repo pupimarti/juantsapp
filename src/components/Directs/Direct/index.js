@@ -22,6 +22,7 @@ export default function Direct(props) {
           user: props.user,
           picture: props.picture,
           name: props.name,
+          desc: props.desc
         });
       }}
       className={getClass()}

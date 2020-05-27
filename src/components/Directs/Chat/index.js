@@ -9,9 +9,12 @@ import search from "img/search.svg";
 import clip from "img/clip.svg";
 import Message from "./Message";
 import Day from "./Day";
+import ProfileContact from "components/ProfileContact";
 
 export default function Chat(props) {
   const [messages, setMessages] = useState(null);
+
+  const [showProfile, setShowProfile] = useState(false);
 
   const compareDate = (date_message, date) => {
     const date_msg = new Date(date_message);
@@ -49,6 +52,7 @@ export default function Chat(props) {
 
   useEffect(() => {
     if (props.direct !== null) {
+      setShowProfile(false);
       const arr_msg = getChatUser("default", props.direct.user, props.directs);
       if (arr_msg === "none") {
         props.addChat("default", props.direct.user);
@@ -67,6 +71,19 @@ export default function Chat(props) {
     );
     if (chat) setMessages(null);
   };
+
+  if (showProfile)
+    return (
+      <div className="content-chat">
+        <ProfileContact
+          back={() => setShowProfile(false)}
+          name={props.direct.name}
+          img={props.direct.picture}
+          desc={props.direct.desc}
+          user={props.direct.user}
+        />
+      </div>
+    );
 
   if (props.direct === null) {
     return (
@@ -118,7 +135,10 @@ export default function Chat(props) {
         ></div>
         <div className="content-header-chat">
           <div className="header-chat">
-            <div className="content-header-user">
+            <div
+              onClick={() => setShowProfile(true)}
+              className="content-header-user"
+            >
               <img
                 className="chat-user-img"
                 src={props.direct.picture}

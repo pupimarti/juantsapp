@@ -137,7 +137,7 @@ export default function Directs(props) {
                       user={user.user}
                       name={user.name}
                       picture={user.picture}
-                      verify={user.verify}
+                      desc={user.desc}
                       message={d.messages[d.messages.length - 1].message}
                       time={d.messages[d.messages.length - 1].time}
                       own={d.messages[d.messages.length - 1].own}
@@ -153,7 +153,7 @@ export default function Directs(props) {
                       user={user.user}
                       name={user.name}
                       picture={user.picture}
-                      verify={user.verify}
+                      desc={user.desc}
                       message=""
                       time={null}
                       own={false}
