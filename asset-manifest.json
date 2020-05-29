@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/juantsapp/static/css/main.6502b65e.chunk.css",
-    "main.js": "/juantsapp/static/js/main.8fd839d9.chunk.js",
-    "main.js.map": "/juantsapp/static/js/main.8fd839d9.chunk.js.map",
+    "main.css": "/juantsapp/static/css/main.880bd317.chunk.css",
+    "main.js": "/juantsapp/static/js/main.8c2f0944.chunk.js",
+    "main.js.map": "/juantsapp/static/js/main.8c2f0944.chunk.js.map",
     "runtime-main.js": "/juantsapp/static/js/runtime-main.62e77619.js",
     "runtime-main.js.map": "/juantsapp/static/js/runtime-main.62e77619.js.map",
     "static/js/2.50dd1fe2.chunk.js": "/juantsapp/static/js/2.50dd1fe2.chunk.js",
     "static/js/2.50dd1fe2.chunk.js.map": "/juantsapp/static/js/2.50dd1fe2.chunk.js.map",
     "index.html": "/juantsapp/index.html",
-    "precache-manifest.acb68db5e2a60409898ab7121e72e10c.js": "/juantsapp/precache-manifest.acb68db5e2a60409898ab7121e72e10c.js",
+    "precache-manifest.42d6f2b710663d3080027daa7b7306e0.js": "/juantsapp/precache-manifest.42d6f2b710663d3080027daa7b7306e0.js",
     "service-worker.js": "/juantsapp/service-worker.js",
-    "static/css/main.6502b65e.chunk.css.map": "/juantsapp/static/css/main.6502b65e.chunk.css.map",
+    "static/css/main.880bd317.chunk.css.map": "/juantsapp/static/css/main.880bd317.chunk.css.map",
     "static/js/2.50dd1fe2.chunk.js.LICENSE.txt": "/juantsapp/static/js/2.50dd1fe2.chunk.js.LICENSE.txt",
     "static/media/camera.svg": "/juantsapp/static/media/camera.14943488.svg",
     "static/media/check.svg": "/juantsapp/static/media/check.3dc8183f.svg",
@@ -27,7 +27,7 @@
   "entrypoints": [
     "static/js/runtime-main.62e77619.js",
     "static/js/2.50dd1fe2.chunk.js",
-    "static/css/main.6502b65e.chunk.css",
-    "static/js/main.8fd839d9.chunk.js"
+    "static/css/main.880bd317.chunk.css",
+    "static/js/main.8c2f0944.chunk.js"
   ]
 }
