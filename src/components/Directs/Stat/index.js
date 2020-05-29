@@ -26,40 +26,48 @@ export default function Stat(props) {
     if(desc.length < props.max)
       setDesc(e.target.value);
   }
-
-  return (
-    <div className="content-stat">
-      <div className="center-stat">
-        <p className="title-stat">{props.title}</p>
-        {!edit ? (
-          <p className="stat">
-            {desc}
-            <span>
+  if(props.isEditable)
+    return (
+      <div className="content-stat">
+        <div className="center-stat">
+          <p className="title-stat">{props.title}</p>
+          {!edit ? (
+            <p className="stat">
+              {desc}
+              <span>
+                <img
+                  src={pencil}
+                  alt="editar"
+                  onClick={() => {
+                    setEdit(true);
+                  }}
+                  className="edit-stat"
+                />
+              </span>
+            </p>
+          ) : (
+            <div className="content-input-stat">
+              <textarea type="text" value={desc} 
+              onKeyDown={keyDown}
+              onChange={handleEditDesc} className="stat-input" />
+              <span className="max-length">{props.max - desc.length}</span>
               <img
-                src={pencil}
-                alt="editar"
-                onClick={() => {
-                  setEdit(true);
-                }}
-                className="edit-stat"
+                src={confirm}
+                alt="confirm"
+                onClick={handleEditUser}
+                className="edit-stat edit-input"
               />
-            </span>
-          </p>
-        ) : (
-          <div className="content-input-stat">
-            <textarea type="text" value={desc} 
-            onKeyDown={keyDown}
-            onChange={handleEditDesc} className="stat-input" />
-            <span className="max-length">{props.max - desc.length}</span>
-            <img
-              src={confirm}
-              alt="confirm"
-              onClick={handleEditUser}
-              className="edit-stat edit-input"
-            />
-          </div>
-        )}
+            </div>
+          )}
+        </div>
       </div>
-    </div>
-  );
+    );
+  return(
+      <div className="content-stat">
+        <div className="center-stat">
+          <p className="title-stat">{props.title}</p>
+              {props.content}
+        </div>
+      </div>
+    );
 }

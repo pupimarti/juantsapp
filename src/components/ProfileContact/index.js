@@ -23,18 +23,22 @@ export default function ProfileContact(props) {
         <div className="box-profile-contact">
             <Stat
               title="Archivos, enlaces y documentos"
-              desc="Sin archivos multimedia, enlaces ni documentos"
+              content={<p className="no-multimedia">Sin archivos multimedia, enlaces ni documentos</p>}
             />
         </div>
         <div className="box-profile-contact content-stat">
-            <p className="center-stat only-action-text">Silenciar notificaciones</p>
-            <hr/>
-            <p className="center-stat only-action-text">Mensajes destacados</p>
+            <p className="center-stat only-action only-action-text hr-bb">Silenciar notificaciones</p>
+            <p className="center-stat only-action only-action-text">Mensajes destacados</p>
         </div>
         <div className="box-profile-contact">
             <Stat
               title="Info. y nombre de usuario"
-              desc={props.desc + " - " + props.user}
+              content={
+                <React.Fragment>
+                  <p className="only-action only-action-text hr-bb">{props.desc}</p>
+              <p className="only-action only-action-text">{props.user}</p>
+                </React.Fragment>
+              }
             />
         </div>
         <div className="box-profile-contact content-stat">

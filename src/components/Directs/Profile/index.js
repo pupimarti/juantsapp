@@ -25,23 +25,23 @@ export default function Profile(props) {
     return setUser(user, users, setUsers);
   };
 
-
   const [showOptions, setShowOptions] = useState(false);
 
   const options = [
     {
-      "name":"Ver foto",
-      "action": () => props.handleSetShowPicture(props.user.user, props.user.picture)
+      name: "Ver foto",
+      action: () =>
+        props.handleSetShowPicture(props.user.user, props.user.picture),
     },
     {
-      "name":"Subir foto",
-      "action":() => console.log('subir foto')
+      name: "Subir foto",
+      action: () => console.log("subir foto"),
     },
     {
-      "name":"Eliminar foto",
-      "action":() => console.log('eliminar foto')
-    }
-  ]
+      name: "Eliminar foto",
+      action: () => console.log("eliminar foto"),
+    },
+  ];
 
   return (
     <div className="content-new-chat">
@@ -55,21 +55,23 @@ export default function Profile(props) {
         </div>
       </header>
       <div className="content-profile-stats">
-        <div onClick={() => setShowOptions(!showOptions)} className="center-stat content-profile-img">
+        <div
+          onClick={() => setShowOptions(!showOptions)}
+          className="center-stat content-profile-img"
+        >
           <img
             src={props.user.picture}
             alt="profile-img"
             className="profile-img"
           />
-          <div
-            className={showOptions ? "hover-img select" : "hover-img"}
-          >
+          <div className={showOptions ? "hover-img select" : "hover-img"}>
             <img src={camera} alt="camera" className="stat-camera-hover" />
             <p className="stat-text-hover">CAMBIAR FOTO DE PERFIL</p>
           </div>
           {showOptions && <Options options={options} />}
         </div>
         <Stat
+          isEditable={true}
           max={25}
           edit={editName}
           title="Tu nombre"
@@ -81,7 +83,13 @@ export default function Profile(props) {
             para tus contactos de JuantsApp.
           </p>
         </div>
-        <Stat max={50} edit={editDesc} title="Info." desc={props.user.desc} />
+        <Stat
+          isEditable={true}
+          max={50}
+          edit={editDesc}
+          title="Info."
+          desc={props.user.desc}
+        />
       </div>
     </div>
   );

@@ -23,7 +23,6 @@
 }
 
 .content-chat-logo-default{
-    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -33,6 +32,7 @@
 
 .chat-logo-default{
     width: auto;
+    border-radius: 50%;
 }
 
 .chat-title-default{
