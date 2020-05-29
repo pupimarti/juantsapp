@@ -81,6 +81,7 @@ export default function Chat(props) {
           img={props.direct.picture}
           desc={props.direct.desc}
           user={props.direct.user}
+          setShowPicture={props.setShowPicture}
         />
       </div>
     );

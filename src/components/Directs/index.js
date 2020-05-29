@@ -18,6 +18,7 @@ import getUserMin from "components/services/getUserMin";
 import Context from "components/Context/AppContext";
 import setDirectsRead from "components/services/setDirectsUnread";
 import addDirectChat from "components/services/addDirectChat";
+import Options from "./Options";
 
 export default function Directs(props) {
   const [data, setData] = useState("loading");
@@ -33,6 +34,27 @@ export default function Directs(props) {
   const { directs, setDirects } = useContext(Context);
 
   const [showPicture, setShowPicture] = useState(null);
+
+  
+  const [showOptions, setShowOptions] = useState(false);
+
+  const options = [
+    {
+      name: "Perfil",
+      action: () =>{
+        setShowOptions(false);
+        setProfile(true);
+      }
+    },
+    {
+      name: "Nuevo chat",
+      action: () => {
+        setShowOptions(false);
+        setNewChat(true);
+      }
+    }
+  ];
+
 
   const handleSetShowPicture = (user, img) => {
     setShowPicture({ user, img });
@@ -115,10 +137,13 @@ export default function Directs(props) {
                 src={newMessage}
                 alt="nuevo mensaje"
               />
-              <div className="menu">
+              <div onClick={() => setShowOptions(!showOptions)} className="menu">
                 <div className="point"></div>
                 <div className="point"></div>
                 <div className="point"></div>
+              </div>
+              <div className="content-options-header">
+              {showOptions && <Options options={options} />}
               </div>
             </div>
           </div>
@@ -173,6 +198,7 @@ export default function Directs(props) {
         setDirects={setDirects}
         setNewChat={setNewChat}
         addChat={handleAddChat}
+        setShowPicture={setShowPicture}
       />
     </div>
   );

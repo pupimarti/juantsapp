@@ -12,7 +12,7 @@ export default function ProfileContact(props) {
         </div>
         <p className="profile-contact-header-text">Info. de contacto</p>
       </header>
-      <div className="box-profile-contact content-profile-info-user">
+      <div onClick={() => {props.setShowPicture({user: props.user, img: props.img})}} className="box-profile-contact content-profile-info-user">
         <img
           className="profile-contact-img"
           src={props.img}
