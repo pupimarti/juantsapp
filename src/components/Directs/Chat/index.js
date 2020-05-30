@@ -10,6 +10,7 @@ import clip from "img/clip.svg";
 import Message from "./Message";
 import Day from "./Day";
 import ProfileContact from "components/ProfileContact";
+import Options from "../Options";
 
 export default function Chat(props) {
   const [messages, setMessages] = useState(null);
@@ -26,6 +27,32 @@ export default function Chat(props) {
     }
     return true;
   };
+
+  const [showOptions, setShowOptions] = useState(false);
+
+  const options = [
+    {
+      name: "Info. del contacto",
+      action: () => setShowProfile(true)
+    },
+    {
+      name: "Seleccionar mensajes",
+      action: () => console.log('seleccionar mensajes'),
+    },
+    {
+      name: "Silenciar notificaciones",
+      action: () => console.log('Silenciar notificaciones'),
+    },
+    {
+      name: "Vaciar mensajes",
+      action: () => console.log('Vaciar mensajes'),
+    },
+    {
+      name: "Eliminar chat",
+      action: () => console.log('eliminar chat'),
+    },
+  ];
+
 
   const getMessages = () => {
     let arr_msg = [];
@@ -150,10 +177,15 @@ export default function Chat(props) {
             <div className="content-actions-header">
               <img src={search} alt="search" className="icon" />
               <img src={clip} alt="clip" className="icon" />
-              <div className="menu">
-                <div className="point"></div>
-                <div className="point"></div>
-                <div className="point"></div>
+              <div onClick={() => setShowOptions(!showOptions)} className={showOptions ? "content-menu menu-select" : "content-menu"}>
+                <div className="menu">
+                  <div className="point"></div>
+                  <div className="point"></div>
+                  <div className="point"></div>
+                </div>
+                <div className="content-options-header">
+                  {showOptions && <Options options={options} />}
+                </div>
               </div>
             </div>
           </div>

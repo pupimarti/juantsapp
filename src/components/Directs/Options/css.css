@@ -1,12 +1,11 @@
 .content-options{
-    width: 100%;
-    max-width: 340px;
     background-color: #fff;
     border-radius: 3px;
     box-shadow: 0 2px 5px 0 rgba(0,0,0,.26),0 2px 10px 0 rgba(0,0,0,.16);
     padding: 9px 0;
     box-sizing: border-box;
     z-index: 100;
+    min-width: 100%;
 }
 
 .option{
@@ -27,4 +26,9 @@
 
 .dark .option:hover{
     background-color: rgba(0, 0, 0, .15);
+}
+
+.option-text{
+    width: 150px;
+    max-width: 100%;
 }
