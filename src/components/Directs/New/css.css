@@ -18,7 +18,6 @@
 }
 
 .dark .content-new-chat-header{
-    background-color: #121212;
     filter: invert();
 }
 

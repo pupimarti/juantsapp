@@ -35,26 +35,24 @@ export default function Directs(props) {
 
   const [showPicture, setShowPicture] = useState(null);
 
-  
   const [showOptions, setShowOptions] = useState(false);
 
   const options = [
     {
       name: "Perfil",
-      action: () =>{
+      action: () => {
         setShowOptions(false);
         setProfile(true);
-      }
+      },
     },
     {
       name: "Nuevo chat",
       action: () => {
         setShowOptions(false);
         setNewChat(true);
-      }
-    }
+      },
+    },
   ];
-
 
   const handleSetShowPicture = (user, img) => {
     setShowPicture({ user, img });
@@ -137,13 +135,18 @@ export default function Directs(props) {
                 src={newMessage}
                 alt="nuevo mensaje"
               />
-              <div onClick={() => setShowOptions(!showOptions)} className="menu">
-                <div className="point"></div>
-                <div className="point"></div>
-                <div className="point"></div>
-              </div>
-              <div className="content-options-header">
-              {showOptions && <Options options={options} />}
+              <div 
+                  onClick={() => setShowOptions(!showOptions)} className={showOptions ? "content-menu menu-select" : "content-menu"}>
+                <div
+                  className="menu"
+                >
+                  <div className="point"></div>
+                  <div className="point"></div>
+                  <div className="point"></div>
+                </div>
+                <div className="content-options-header">
+                  {showOptions && <Options options={options} />}
+                </div>
               </div>
             </div>
           </div>
